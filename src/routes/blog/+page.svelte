@@ -2,8 +2,6 @@
 	import { createQuery, useQueryClient } from '@tanstack/svelte-query';
 	import { getPostsQuery } from '../../services/blog/blog.queries';
 
-	const client = useQueryClient();
-
 	const posts = createQuery(getPostsQuery);
 </script>
 
