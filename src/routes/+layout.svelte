@@ -6,5 +6,9 @@
 </script>
 
 <QueryClientProvider client={data.queryClient}>
+	<nav>
+		<li><a href="/">Home</a></li>
+		<li><a href="/blog">Blog</a></li>
+	</nav>
 	<slot />
 </QueryClientProvider>

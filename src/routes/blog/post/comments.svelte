@@ -7,6 +7,13 @@
 </script>
 
 <form method="POST">
+	<select>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">7</option>
+	</select>
 	<label>
 		Email
 		<input name="comment" type="text" />
