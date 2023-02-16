@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^2.0.2",
 		"@tanstack/svelte-query": "^4.24.6"
 	}
 }
