@@ -5,10 +5,7 @@ export const prerender = true;
 
 export const load: PageLoad = async ({ parent, params }) => {
 	const { queryClient } = await parent();
-
 	const postId = params.slug;
-
-	await queryClient.prefetchQuery(getPostQuery(postId));
-
-	return { postId };
+	const post = queryClient.fetchQuery(getPostQuery(postId))
+	return { post };
 };
