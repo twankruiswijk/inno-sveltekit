@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { createQuery, useQueryClient } from '@tanstack/svelte-query';
-	import { getPostQuery } from '../../services/blog/blog.queries';
+	import { getPostsQuery } from '../../services/blog/blog.queries';
 
 	const client = useQueryClient();
 
-	const posts = createQuery(getPostQuery);
+	const posts = createQuery(getPostsQuery);
 </script>
 
 {#if $posts.status === 'loading'}
@@ -15,7 +15,7 @@
 	<ul>
 		{#each $posts.data as post}
 			<article>
-				<a href={`/${post.id}`}>
+				<a href={`/blog/${post.id}`}>
 					{post.title}
 				</a>
 			</article>

@@ -11,5 +11,6 @@ export const getPosts = async () => {
 export const getPostById = async (id: number): Promise<Post> => {
 	const response = await fetch(`${POST_URL}/${id}`);
 	const data = (await response.json()) as Post;
+
 	return data;
 };
